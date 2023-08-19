@@ -31,7 +31,7 @@ func main() {
 
 	// repeat job at 10pm everyday
 	ctab := crontab.New()
-	ctab.MustAddJob("0 22 * * *", func() { CreateBreakfastPoll(ctx, b) })
+	ctab.MustAddJob("0 22 * * 0-5", func() { CreateBreakfastPoll(ctx, b) })
 
 	// start bot
 	log.Println("Bot started")
